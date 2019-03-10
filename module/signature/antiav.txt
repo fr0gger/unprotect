@@ -1,0 +1,33 @@
+avgcc
+avgnt
+Avira
+QHWatchdog
+Total Security 360
+ahnsd
+AhnLab-V3
+BitDefender
+clamav
+ClamAV
+fpavserver
+F-Prot
+fssm32
+F-Secure
+GData
+Kaspersky
+McAfee
+Microsoft security essentials
+zanda
+Norman
+nProtect
+Panda
+savservice
+Sophos
+saswinlo
+SUPERAntiSpyware
+Symantec
+TheHacker
+TrendMicro
+ViRobot
+VirusBuster
+Avast
+NOD32
