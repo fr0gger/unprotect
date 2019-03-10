@@ -45,7 +45,7 @@ Put your Virustotal API Key in the config.py file:
 ```
 APIKEY = "<enter_key"
 ```
-Additionally, you might want to add your own Yara rules to scan a PE. This can be added in the file “module/yara-rules/user_rules.yar”.
+Additionally, the user might want to add his own Yara rules to scan a PE. This can be added in the file “module/yara-rules/user_rules.yar”.
 
 ### Package requirements
 #### Virtualenv
@@ -74,6 +74,8 @@ The current version of Unprotect doesn’t support any options. The simple way t
 ```
 unprotect <PE_file>
 ```
+### Report Example
+https://github.com/fr0gger/unprotect/tree/master/report_example
 
 ### Licence
 APACHE License version 2.0
