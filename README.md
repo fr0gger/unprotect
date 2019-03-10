@@ -78,5 +78,4 @@ unprotect <PE_file>
 https://github.com/fr0gger/unprotect/tree/master/report_example
 
 ### Licence
-APACHE License version 2.0
-
+This project is licensed under the APACHE License version 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
