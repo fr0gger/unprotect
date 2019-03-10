@@ -49,7 +49,7 @@ Additionally, the user might want to add his own Yara rules to scan a PE. This c
 
 ### Package requirements
 #### Virtualenv
-The tool is currently running under Virtualenv (https://virtualenv.pypa.io/en/latest/), which creates a virtual python work environment to avoid any issue with the current OS as well with the versioning. 
+The tool is currently running under [Virtualenv](https://virtualenv.pypa.io/en/latest/), which creates a virtual python work environment to avoid any issue with the current OS as well with the versioning. 
 
 To install unprotect follow the steps:
 *	Create your own virtualenv: 
