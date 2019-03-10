@@ -7,6 +7,9 @@ The Unprotect Project contains two main parts:
 * A website with a complete database and evasion techniques classification. The website is available here: www.unprotect.it.
 * A python standalone tool to detect evasion technique in a specific malware. 
 
+The standalone tool available in this repository contains the following features: 
+![features](features.png)
+
 ## Disclaimer
 This tool is the result of several months of research and it is an attempt to bring a tool to the community dedicated to malware evasion techniques. It started as a side project and of course requires some improvements. Of course, it is not perfect nor magic! 
 
