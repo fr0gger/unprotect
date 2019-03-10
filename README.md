@@ -35,17 +35,16 @@ brew install ssdeep
 brew install libmagic
 ```
 #### Windows
-Refer to the windows_unprotect folder.
 ```bash
 pip install virtualenv
 ```
 ### Variables To Modify 
 Before to run the installation setup, you will need to modify the config.py files to put your own VirusTotal API. 
-Put your Virustotal API Key in the config.py file:
+Put your Virustotal API Key in the [config.py] file:
 ```
 APIKEY = "<enter_key"
 ```
-Additionally, the user might want to add his own Yara rules to scan a PE. This can be added in the file “module/yara-rules/user_rules.yar”.
+Additionally, the user might want to add his own Yara rules to scan a PE. This can be added in the file [module/yara-rules/user_rules.yar](https://github.com/fr0gger/unprotect/blob/master/module/yara-rules/user_rules.yar).
 
 ### Package requirements
 #### Virtualenv
