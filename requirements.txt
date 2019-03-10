@@ -21,4 +21,3 @@ viv-utils==0.3.9
 yara-python==3.7.0
 https://github.com/williballenthin/vivisect/zipball/master
 https://github.com/fireeye/flare-floss/zipball/master
-
