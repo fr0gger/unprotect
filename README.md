@@ -40,7 +40,7 @@ pip install virtualenv
 ```
 ### Variables To Modify 
 Before to run the installation setup, you will need to modify the config.py files to put your own VirusTotal API. 
-Put your Virustotal API Key in the [config.py] file:
+Put your Virustotal API Key in the [config.py](https://github.com/fr0gger/unprotect/blob/master/module/config.py) file:
 ```
 APIKEY = "<enter_key"
 ```
