@@ -64,18 +64,17 @@ source unprotect/bin/activate
 ```
 sudo pip install -r requirements.txt
 ```
--	Run unprotect: 
+*	Run unprotect: 
 ```
 python unprotect.py
 ```
-
 ### Usage
 The current version of Unprotect doesn’t support any options. The simple way to use unprotect is to run it against a PE file:
 ```
-unprotect <PE_file>
+python unprotect.py <PE_file>
 ```
 ### Report Example
-https://github.com/fr0gger/unprotect/tree/master/report_example
+Report example can be found here: [Report](https://github.com/fr0gger/unprotect/tree/master/report_example)
 
 ### Licence
 This project is licensed under the APACHE License version 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
