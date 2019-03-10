@@ -19,7 +19,6 @@ Please take notes of the following:
 * This tool has been tested on Mac OS and Linux, a Windows version can be found in the folder unprotect_windows. 
 
 ## Getting Started
-
 ### Prerequisites
 You must install some packages before to start. 
 #### Linux
@@ -74,6 +73,5 @@ python unprotect.py <PE_file>
 ```
 ### Report Example
 Report example can be found here: [Report](https://github.com/fr0gger/unprotect/tree/master/report_example)
-
 ### Licence
 This project is licensed under the APACHE License version 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
