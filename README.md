@@ -45,33 +45,34 @@ APIKEY = "<enter_key"
 ```
 Additionally, the user might want to add his own Yara rules to scan a PE. This can be added in the file [module/yara-rules/user_rules.yar](https://github.com/fr0gger/unprotect/blob/master/module/yara-rules/user_rules.yar).
 
-### Package requirements
-#### Virtualenv
+
+### Virtualenv
 The tool is currently running under [Virtualenv](https://virtualenv.pypa.io/en/latest/), which creates a virtual python work environment to avoid any issue with the current OS as well with the versioning. 
 
-To install unprotect follow the steps:
-*	Create your own virtualenv: 
+Create your own virtualenv: 
 ```
 virtualenv -p python2.7 unprotect
 ```
-*	Enable your virtual env: 
+Enable your virtual env: 
 ```
 source unprotect/bin/activate
 ```
-* Install the dependencies: 
+
+### Package requirements
+Install the dependencies: 
 ```
 sudo pip install -r requirements.txt
 ```
-*	Run unprotect: 
+Run unprotect: 
 ```
 python unprotect.py
 ```
-### Usage
+## Usage
 The current version of Unprotect doesn’t support any options. The simple way to use unprotect is to run it against a PE file:
 ```
 python unprotect.py <PE_file>
 ```
-### Report Example
+## Report Example
 Report example can be found here: [Report](https://github.com/fr0gger/unprotect/tree/master/report_example)
-### Licence
+## Licence
 This project is licensed under the APACHE License version 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
