@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 """Unprotect Malware - main file - unprotect.py version 1.0
 
-This module is the main file of the Unprotect. This fil will call every module of the project for the analysis.
-
+This module is the main file of Unprotect. This fil will call every module of the project for the analysis.
 
 """
 import sys
@@ -219,11 +218,13 @@ def main(exefile):
         print "\nAnti-Debugging Tricks"
         print "-" * 80
 
-        tlscallback = check_tls(exe)
-
-        if tlscallback:
-            print(module.config.G + "[+]" + module.config.W + " TLS Callback found at: 0x%x" % tlscallback)
-
+        try:
+            tlscallback = check_tls(exe)
+            if tlscallback:
+                print(module.config.G + "[+]" + module.config.W + " TLS Callback found at: 0x%x" % tlscallback)
+        except:
+            pass    
+            
         dbgmatches = get_antidebug(exe, module.config.antidbg_api)
 
         if dbgmatches:
