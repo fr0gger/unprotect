@@ -15,7 +15,7 @@ The standalone tool available in this repository contains the following features
 This tool is the result of several months of research and it is an attempt to bring a tool to the community dedicated to malware evasion techniques. It started as a side project and of course requires some improvements. Of course, it is not perfect nor magic! 
 
 Please take notes of the following:
-* This project currently works with python2.7 (it will be upgraded to python3 in a later version). 
+* This project currently works with python2.7 (it will be upgraded to python3 in next versions). 
 * It might have some bugs or vulnerabilities.
 * This tool is currently working only with a valid PE file (support of additional format file will be added in a later version). 
 * There is currently no option supported, the standard output will provide you a full report.
