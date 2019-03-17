@@ -27,9 +27,10 @@ Please take notes of the following:
 You must install some packages before to start. 
 #### Linux
 ```bash
-apt-get install python-pip 
-apt-get install libfuzzy-dev
-apt-get install ssdeep
+sudo apt-get install python-pip
+sudo apt-get install build-essential libffi-dev python python-dev python-pip automake autoconf libtool
+sudo apt-get install libfuzzy-dev
+sudo apt-get install ssdeep
 ```
 #### Mac OS
 ```bash
