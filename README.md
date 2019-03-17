@@ -27,7 +27,7 @@ Please take notes of the following:
 You must install some packages before to start. 
 #### Linux
 ```bash
-apt-get install pip 
+apt-get install python-pip 
 apt-get install libfuzzy-dev
 apt-get install ssdeep
 ```
