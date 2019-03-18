@@ -24,7 +24,7 @@ from pathlib import Path
 
 # VARIABLES TO CHANGE
 #############################################################################
-# Put your Virustotalcd  API Key
+# Put your Virustotal  API Key
 APIKEY = ""
 
 # Add your own yara rules file if you want
