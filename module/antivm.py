@@ -5,14 +5,12 @@
 This module get information about the pe file.
 
 """
-
 import re
 from capstone import *
 
 
 def get_vm(filename):
     trk = []
-
     VM_Str = {
         "Virtual Box": "VBox",
         "VMware": "WMvare"
@@ -41,7 +39,6 @@ def get_vm(filename):
         for trick in VM_Sign:
             if buf.find(VM_Sign[trick][::-1]) > -1:
                 trk.append(trick)
-
     return trk
 
 
