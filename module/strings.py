@@ -40,8 +40,6 @@ def get_decoded_strings(exe):
         floss.main.get_all_plugins(),
         selected_functions
     )
-
-    # Decode & extract hidden & encoded strings
     decoded_strings = floss.main.decode_strings(
         vw,
         decoding_functions_candidates,
@@ -52,11 +50,7 @@ def get_decoded_strings(exe):
         selected_functions,
         MIN_STRINGLEN
     )
-
-    # pprint(type(decoded_strings))
-
     stack_strings2 = list(stack_strings)
-
     decoded_strings2 = []
 
     for i in decoded_strings:
@@ -64,7 +58,6 @@ def get_decoded_strings(exe):
 
     for y in stack_strings2:
         decoded_strings2.append(y[1])
-
     return decoded_strings2
 
 
@@ -78,13 +71,8 @@ def get_strings(exe):
     # s.offset
     for s in ascii_strings(b, n=4):
         string_list.append(s.s)
-
     for s in unicode_strings(b):
         string_list.append(s.s)
-
-
     decoded_strings = get_decoded_strings(exe)
-
-
     return string_list, decoded_strings
 
