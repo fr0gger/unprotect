@@ -5,7 +5,6 @@
 This module get information about the pe file.
 
 """
-
 from capstone import *
 
 
@@ -22,7 +21,6 @@ def garbage_byte(pe):
     count = 0
     for i in rdbin:
         if i.mnemonic == "je" or i.mnemonic == "jz" or i.mnemonic == "jmp":
-            # prev = ("0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
             nextop = next(rdbin)
             if nextop.mnemonic == "push":
                 count += 1
@@ -40,11 +38,9 @@ def fake_jump(pe):  # Experimental
 
             nextop = next(rdbin)
             if nextop.mnemonic == "jnz" or nextop.mnemonic == "jnb":
-                # print nextop
                 print prev
                 print("0x%x:\t%s\t%s" % (nextop.address, nextop.mnemonic, nextop.op_str))
                 count += 1
-
     return count
 
 
@@ -83,7 +79,6 @@ def nop_seq(pe):
                             if nextop4.mnemonic == "nop":
                                 nextop5 = next(rdbin)
                                 count += 1
-
             except:
                 pass
     return count
