@@ -26,19 +26,15 @@ def get_info(pe, filename):
     ftype = magic.from_file(filename)
     fname = os.path.basename(filename)
     fsize = os.path.getsize(filename)
-
     dll = pe.FILE_HEADER.IMAGE_FILE_DLL
     nsec = pe.FILE_HEADER.NumberOfSections
-
     tstamp = pe.FILE_HEADER.TimeDateStamp
-
     try:
         """ return date """
         tsdate = datetime.datetime.fromtimestamp(tstamp)
     except:
         """ return timestamp """
         tsdate = str(tstamp) + " [Invalid date]"
-
     return ftype, fname, fsize, tsdate, dll, nsec
 
 
@@ -68,7 +64,6 @@ def get_hash(pe, filename):
     sha5 = s5.hexdigest()
 
     hashdeep = ssdeep.hash_from_file(filename)
-
     return md5, sha1, ih, hashdeep, sha2, sha5
 
 
@@ -87,14 +82,12 @@ def get_meta(pe):
                     print "%s:\t    %s" % var.entry.items()[0]
     except (AttributeError, RuntimeError, TypeError, NameError):
         return False
-
     return True
 
 
 def get_antidebug(pe, antidbg_api):
     antidbgs = open(antidbg_api, 'r')
     dbgmatches = []
-
     line = antidbgs.readlines()
     try:
         for entry in pe.DIRECTORY_ENTRY_IMPORT:
@@ -115,19 +108,16 @@ def get_sec(pe):
     IMAGE_DLLCHARACTERISTICS_NX_COMPAT = 0x0100
     IMAGE_DLLCHARACTERISTICS_NO_SEH = 0x0400
     IMAGE_DLLCHARACTERISTICS_GUARD_CF = 0x4000
-
     aslr_check = bool(pe.OPTIONAL_HEADER.DllCharacteristics & IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE)
     dep_check = bool(pe.OPTIONAL_HEADER.DllCharacteristics & IMAGE_DLLCHARACTERISTICS_NX_COMPAT)
     seh_check = bool(pe.OPTIONAL_HEADER.DllCharacteristics & IMAGE_DLLCHARACTERISTICS_NO_SEH)
     cfg_check = bool(pe.OPTIONAL_HEADER.DllCharacteristics & IMAGE_DLLCHARACTERISTICS_GUARD_CF)
-
     return aslr_check, dep_check, seh_check, cfg_check
 
 
 def get_procinj(pe, antidbg_api):
     antidbgs = open(antidbg_api, 'r')
     dbgmatches = []
-
     line = antidbgs.readlines()
     try:
         for entry in pe.DIRECTORY_ENTRY_IMPORT:
@@ -146,7 +136,6 @@ def get_procinj(pe, antidbg_api):
 
 def get_impfuzzy(filename):
     impfuzzy = pyimpfuzzy.get_impfuzzy(filename)
-
     return impfuzzy
 
 
@@ -157,17 +146,14 @@ def get_mmh(filename):
 
 def get_richhash(pe, filename):
     content = ""
-
     dotnet = pe.OPTIONAL_HEADER.DATA_DIRECTORY[14]
     if dotnet.VirtualAddress == 0 and dotnet.Size == 0:
         fh = open(filename, "r")
         for i in fh:
             content += i
         fh.close()
-
     else:
         return "No Rich header available in .NET executable!", "No Rich header available in .NET executable!"
-
     try:
         xorkey = re.search("\x52\x69\x63\x68....\x00", content).group(0)[4:8]
         dansAnchor = ''.join(chr(ord(x) ^ ord(y)) for x, y in zip(xorkey, "DanS"))
