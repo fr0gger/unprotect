@@ -29,7 +29,6 @@ def unicode_strings(buf, n=4):
 
 def get_decoded_strings(exe):
     # type: (object) -> object
-    # Prepare FLOSS for extracting hidden & encoded strings
     vw = vivisect.VivWorkspace()
     vw.loadFromFile(exe)
     vw.analyze()
@@ -40,8 +39,6 @@ def get_decoded_strings(exe):
         floss.main.get_all_plugins(),
         selected_functions
     )
-
-    # Decode & extract hidden & encoded strings
     decoded_strings = floss.main.decode_strings(
         vw,
         decoding_functions_candidates,
@@ -53,15 +50,11 @@ def get_decoded_strings(exe):
         MIN_STRINGLEN
     )
 
-    # pprint(type(decoded_strings))
-
     stack_strings2 = list(stack_strings)
-
     decoded_strings2 = []
 
     for i in decoded_strings:
         decoded_strings2.append(i[1])
-
     for y in stack_strings2:
         decoded_strings2.append(y[1])
 
