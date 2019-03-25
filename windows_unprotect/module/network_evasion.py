@@ -46,7 +46,6 @@ def get_ip(strings_lst):
             elif lastbyte == "0":
                 uniq_iplist.remove(line)
             else:
-                # print line
                 iptoping = str(line)[1:-1].replace("'", "")
                 try:
                     response = subprocess.check_output(['ping', '-c', '1', '%s' % iptoping],
@@ -78,10 +77,7 @@ def get_url(strings_lst):
     urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', strings_lst)
     # filter on doublon urls
     seen_url = set()
-    # print seen_url
-
     uniq_url = []
-    # print uniq_url
     for x in urls:
         if x not in seen_url:
             uniq_url.append(x)
@@ -93,10 +89,6 @@ def get_url(strings_lst):
         uniq_urllist = map(lambda x: [x], uniq_url)
         for line in uniq_urllist:
             domain = urlparse(str(line)[1:-1].replace("'", ""))
-            # line.append("FALSE")
-
-        # for url in urllist:
-        #    url.append("test")
         return uniq_urllist
 
 
