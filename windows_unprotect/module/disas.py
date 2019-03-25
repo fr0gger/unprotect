@@ -22,7 +22,6 @@ def garbage_byte(pe):
     count = 0
     for i in rdbin:
         if i.mnemonic == "je" or i.mnemonic == "jz" or i.mnemonic == "jmp":
-            # prev = ("0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
             nextop = next(rdbin)
             if nextop.mnemonic == "push":
                 count += 1
@@ -55,7 +54,6 @@ def flow_redirect(pe):
     for i in rdbin:
         # print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
         if i.mnemonic == "push":
-            # prev = ("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
             nextop = next(rdbin)
             if nextop.mnemonic == "ret":
                 count += 1
@@ -66,9 +64,7 @@ def nop_seq(pe):
     rdbin = loader_pe(pe)
     count = 0
     for i in rdbin:
-        # print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
         if i.mnemonic == "nop":
-            # prev = ("0x%x:\t%s\t%s" % (i.address, i.mnemonic, i.op_str))
             try:
                 nextop = next(rdbin)
                 if nextop.mnemonic == "nop":
@@ -83,7 +79,6 @@ def nop_seq(pe):
                             if nextop4.mnemonic == "nop":
                                 nextop5 = next(rdbin)
                                 count += 1
-
             except:
                 pass
     return count
