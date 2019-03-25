@@ -17,8 +17,6 @@ You can find the following option to configure:
 import yara
 import os
 
-#import yara-rules.compiler.yar
-#import signature.antidbg
 from pathlib import Path
 
 
@@ -34,11 +32,9 @@ USER_RULES = "user_rules.yar"
 # authorship information
 __author__ = "Thomas Roccia | @fr0gger_"
 __copyright__ = "Unprotect Project"
-__credits__ = [""]
 __license__ = "APACHE 2.0"
 __version__ = "1.1"
 __maintainer__ = "@fr0gger"
-__email__ = ""
 __status__ = "BlackHat Release"
 __asciiart__ = '''
          __ __                 _           _      _____     _
