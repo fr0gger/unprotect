@@ -79,5 +79,11 @@ python unprotect.py <PE_file>
 ```
 ## Report Example
 Report example can be found here: [Report](https://github.com/fr0gger/unprotect/tree/master/report_example)
+## Built With
+* [Capstone](http://www.capstone-engine.org/)
+* [PEfile](https://github.com/erocarrera/pefile)
+* [YARA](https://github.com/VirusTotal/yara)
+* [FLOSS](https://github.com/fireeye/flare-floss)
+ 
 ## Licence
 This project is licensed under the APACHE License version 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
