@@ -17,7 +17,6 @@ from module.pe_info import get_meta
 from module.pe_info import get_antidebug
 from module.pe_info import get_procinj
 from module.pe_info import get_sec
-#from module.pe_info import get_impfuzzy
 from module.pe_info import get_mmh
 from module.pe_info import get_richhash
 from module.pe_info import check_tls
@@ -53,7 +52,6 @@ from tabulate import tabulate
 def help():
     print module.config.__asciiart__
     print "\t\t" + module.config.__copyright__ + " | " + module.config.__author__
-    print "\t\t\t      " + module.config.__status__
     print  "\n[*] Usage: python unprotect.py malware.exe\n"
 
 
@@ -71,7 +69,6 @@ def main(exefile):
         print module.config.__asciiart__
         print "\t\t" + module.config.__copyright__ + " | " + module.config.__author__
         # print "\t\t\tUnprotect malware for the mass"
-        print "\t\t\t      " + module.config.__status__
 
         try:
             exe = pefile.PE(exefile)
