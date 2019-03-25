@@ -16,9 +16,6 @@ You can find the following option to configure:
 """
 import yara
 import os
-
-#import yara-rules.compiler.yar
-#import signature.antidbg
 from pathlib import Path
 
 
