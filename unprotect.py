@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Unprotect Malware - main file - unprotect.py version 1.0
 
-This module is the main file of Unprotect. This fil will call every module of the project for the analysis.
+This module is the main file of Unprotect. This file will call every module of the project for the analysis.
 
 """
 import sys
@@ -53,7 +53,6 @@ def help():
     print module.config.__asciiart__
     print "\t\t" + module.config.__copyright__ + " | " + module.config.__author__
     print "\t\t\tUnprotect malware for the mass"
-    print "\t\t\t Current status: " + module.config.__status__
     print module.config.C + "\n[*] Usage: python unprotect.py malware.exe\n"
 
 
@@ -71,7 +70,6 @@ def main(exefile):
         print module.config.__asciiart__
         print "\t\t" + module.config.__copyright__ + " | " + module.config.__author__
         print "\t\t\tUnprotect malware for the mass"
-        print "\t\t       Current status: " + module.config.__status__
 
         try:
             exe = pefile.PE(exefile)
