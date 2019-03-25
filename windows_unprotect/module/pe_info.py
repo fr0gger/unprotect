@@ -8,15 +8,7 @@ This module get information about the pe file.
 import datetime
 import hashlib
 import os
-
-#import ssdeep
 from ssftw import SSFTW
-
-
-# import magic
-# import fleep
-
-# import pyimpfuzzy
 import mmh3
 import re
 import math
@@ -26,8 +18,6 @@ import pefile
 from tabulate import tabulate
 
 dirsig = os.path.abspath(os.path.dirname(__file__))
-# Pass the ssdeep executable path to the class constructor.
-#ssdeep = SSFTW("C:\\ssdeep-2.13\\ssdeep.exe")
 
 ssdeep_path = os.path.join(dirsig, 'ssdeep-2.13/ssdeep.exe')
 
@@ -38,10 +28,6 @@ res = []
 
 # Get summary PE info
 def get_info(pe, filename):
-    #with open(filename, "rb") as file:
-    #    info = fleep.get(file.read(128))
-    #ftype = info.type
-    #ftype = magic.from_filename(filename)
     fname = os.path.basename(filename)
     fsize = os.path.getsize(filename)
 
@@ -160,12 +146,6 @@ def get_procinj(pe, antidbg_api):
         pass
 
     return dbgmatches
-
-
-#def get_impfuzzy(filename):
-#    impfuzzy = pyimpfuzzy.get_impfuzzy(filename)
-
-#    return impfuzzy
 
 
 def get_mmh(filename):
@@ -296,7 +276,6 @@ def display_resources(pe):
         if (len(pe.DIRECTORY_ENTRY_RESOURCE.entries) > 0):
             for r in pe.DIRECTORY_ENTRY_RESOURCE.entries:
                 resource(pe, 0, r, [])
-    #print type(res) #tabulate(res, headers=['Id', 'Name', 'Size', 'Lang', 'Sublang', 'MD5'])
     return res
 
 
