@@ -4,7 +4,7 @@ The Unprotect Project is an Open Source project that aims to propose a classific
 ![logo](LogoUnprotect.png)
 
 The Unprotect Project contains two main parts: 
-* A website with a complete database and evasion techniques classification. The website is available here: www.unprotect.it.
+* A website with a complete database and evasion techniques classification.
 * A python standalone tool to detect evasion technique in a specific malware. 
 
 The standalone tool available in this repository contains the following features: 
