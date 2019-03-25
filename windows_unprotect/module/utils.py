@@ -12,8 +12,6 @@ def yarascan(pe, rules):
         matches = rules.match(pe)
     except ValueError as e:
         print(e)
-
     if matches:
         return matches
-
     return
