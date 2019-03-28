@@ -12,10 +12,10 @@ PTable==0.9.2
 pyimpfuzzy
 python-geoip==1.2
 python-geoip-geolite2==2015.303
-requests==2.18.4
+urllib3>=1.23
 tabulate==0.8.2
 tqdm==4.30.0
-urllib3==1.22
+urllib3>=1.23
 ssdeep
 viv-utils==0.3.9
 yara-python==3.7.0
