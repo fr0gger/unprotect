@@ -12,7 +12,7 @@ The standalone tool available in this repository contains the following features
 ![features](features.png)
 
 ## Disclaimer
-This tool is an attempt to bring a tool to the community dedicated to malware evasion techniques. It started as a side project and of course requires some improvements. Of course, it is not perfect nor magic! 
+This tool is an attempt to bring a tool to the community dedicated to malware evasion techniques. It started as a side project and of course requires some improvements. Of course, it is not perfect nor magic! This version is an early prototype.  
 
 Please take notes of the following:
 * This project currently works with python2.7 (it will be upgraded to python3 in next versions). 
