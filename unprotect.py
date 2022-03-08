@@ -395,10 +395,10 @@ def main(exefile):
         res = display_resources(exe)
 
         if res:
-            print module.config.G + "[+] " + module.config.W + "Ressources: "
+            print module.config.G + "[+] " + module.config.W + "Resources: "
             print tabulate(res, headers=['Id', 'Name', 'Size', 'Lang', 'Sublang', 'Type', 'MD5'])
         else:
-            print module.config.R + "[-] " + module.config.W + "No ressources available"
+            print module.config.R + "[-] " + module.config.W + "No resources available"
 
         BTC = []
         MNR = []
